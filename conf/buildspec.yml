@@ -1,0 +1,18 @@
+version: 0.2
+
+env:
+  exported-variables:
+      - branch
+phases:
+  build:
+    commands:
+      - echo "Running Build Script..."
+      - |-
+          if [ "$branch" = "develop"  ]; then
+            echo "Branch is develop"
+            chmod +x ./deploy.sh
+            ./deploy.sh
+          else
+            echo "Branch is master"
+
+          fi
