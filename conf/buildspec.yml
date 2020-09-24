@@ -11,8 +11,9 @@ phases:
           if [ "$branch" = "develop"  ]; then
             echo "Branch is develop"
             chmod +x ./deploy.sh
-            ./deploy.sh
+            ./deploy.sh develop
           else
             echo "Branch is master"
-
+            #chmod +x ./deploy.sh
+            #./deploy.sh develop
           fi
