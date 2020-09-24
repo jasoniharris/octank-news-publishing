@@ -17,7 +17,7 @@ then
     files=`ls *.json`
     for file in $files
     do
-      cat $files | jq > /dev/null
+      python -m json.tool < ${file}
         if [ $? -ne 0 ]
         then
           echo "Content ${file} has failed validation. The build will now exit."
