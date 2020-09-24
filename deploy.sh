@@ -29,6 +29,7 @@ fi
 #Publish content to S3
 if [[ "$1" == "master" ]]
 then
+    echo "Publishing content..."
     BUCKET="content-production-octank-news"
     aws s3 sync content s3://${BUCKET} --exclude '.DS_Store'
 fi
