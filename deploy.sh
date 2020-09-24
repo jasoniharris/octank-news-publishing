@@ -12,6 +12,7 @@
 #Validate content files for syntax errors
 if [[ "$1" == "develop" ]]
 then
+    echo "Running validation..."
     cd content
     files=`ls *.json`
     for file in $files
